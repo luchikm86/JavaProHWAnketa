@@ -15,7 +15,7 @@ public class AnketaServlet extends HttpServlet {
             "<head><title>Prog.kiev.ua</title>" +
             "</head><body>" + "<h1>%s</h1>" + "</body></html>";
 
-    private Statistics stats = new Statistics();
+    public Statistics stats = new Statistics();
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -30,6 +30,5 @@ public class AnketaServlet extends HttpServlet {
 
         resp.getWriter().println(stats.getStats());
     }
-
 
 }
